@@ -18,7 +18,7 @@ COPY deploy/docker/cacerts /usr/lib/jvm/jre/lib/security/
 COPY deploy/docker/entrypoint.sh /opt/app/entrypoint.sh
 COPY ui/dist/testsigma-angular /opt/app/angular/
 COPY server/target/testsigma-server.jar /opt/app/testsigma-server.jar
-COPY server/target/lib/ /opt/app/lib/
+# COPY server/target/lib/ /opt/app/lib/
 COPY server/src/main/scripts/posix/start.sh /opt/app/
 
 RUN rm -f /etc/nginx/conf.d/default.conf
